@@ -1,0 +1,38 @@
+<html>
+  <style>
+    body{ 
+      font-size: 15pt;
+      font-family: arial;
+    }
+  </style>
+
+	<body>
+	  <h1>Team Statistics</h1>
+	  <form action="/">
+	    <input type="submit" value="Return"></p>
+	  </form>
+	  <form method="POST" action="/team">
+	    <input type="text" value="{{team_name}}" name="name">(e.g. "Houston Rockets")</p>
+	    <input type="submit" name="stat" value="Head Coach"></p>
+	   	<input type="submit" name="stat" value="Roster of Season 2009-2010!">
+	    <input type="submit" name="stat" value="Roster of Season 2010-2011!"></p>
+	   	<input type="submit" name="stat" value="Team's top player in Season 2009-2010!">
+	    <input type="submit" name="stat" value="Team's top player in Season 2010-2011!"></p>
+	  </form>
+	  <form method="POST" action="/clear2" >
+	    <input type="submit" value="Clear"></p>
+	  </form>
+
+	  <div>
+	  	{{team_name}}
+	  	{{year}}
+	  </div>
+
+	  {{tables}}
+	  {{tables2}}
+	  {{tables3}}
+	  {{tables4}}
+
+	</body>
+
+</html>

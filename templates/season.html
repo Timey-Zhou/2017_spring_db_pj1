@@ -1,0 +1,65 @@
+<html>
+  <style>
+    body{ 
+      font-size: 15pt;
+      font-family: arial;
+    }
+  </style>
+
+	<body>
+	  <h1>Season Stat and Others</h1>
+	  <form action="/">
+	    <input type="submit" value="Return"></p>
+	  </form>
+
+	  <form method="POST" action="/avgp">
+	    <select name="s1">
+	        <option value="2" {% if sel1=="2" %} selected="selected"{% endif %}>Season 2009-2010</option>
+	        <option value="1" {% if sel1=="1" %} selected="selected"{% endif %}>Season 2010-2011</option>
+	    </select>
+	    <input type="submit" name="stat" value="Show All Teams' average point per game"></p>
+	  </form>
+
+	  <form method="POST" action="/win">
+	    <select name="s2">
+	        <option value="2" {% if sel2=="2" %} selected="selected"{% endif %}>Season 2009-2010</option>
+	        <option value="1" {% if sel2=="1" %} selected="selected"{% endif %}>Season 2010-2011</option>
+	    </select>
+	    <input type="submit" name="stat" value="Show All teams' Win percentage"></p>
+	  </form>
+
+	  <form method="POST" action="/margin">
+	    <select name="s3">
+	        <option value="2" {% if sel3=="2" %} selected="selected"{% endif %}>Season 2009-2010</option>
+	        <option value="1" {% if sel3=="1" %} selected="selected"{% endif %}>Season 2010-2011</option>
+	    </select>
+	    <input type="submit" name="stat" value="Show All teams' Largest margin of victory"></p>
+	  </form>
+
+	  <form method="POST" action="/coach" >
+	    <input type="submit" value="Coach's win-lose % during 2009-2011"></p>
+	  </form>
+
+	  <form method="POST" action="/sponsor">
+	    <select name="s4">
+	        <option value="Nike" {% if sel4=="Nike" %} selected="selected"{% endif %}>Nike</option>
+	        <option value="Addidas" {% if sel4=="Addidas" %} selected="selected"{% endif %}>Adidas</option>
+	        <option value="Under Armour" {% if sel4=="Under Armour" %} selected="selected"{% endif %}>Under Armour</option>
+	    </select>
+	    <input type="submit" name="stat" value="Show sponsorships"></p>
+	  </form>
+
+	  <form method="POST" action="/stadium" >
+	    <input type="submit" value="All stadiums"></p>
+	  </form>
+
+
+	  <form method="POST" action="/clear3" >
+	    <input type="submit" value="Clear"></p>
+	  </form>
+
+	  {{tables}}
+
+	</body>
+
+</html>

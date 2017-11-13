@@ -1,0 +1,36 @@
+<html>
+  <style>
+    body{ 
+      font-size: 15pt;
+      font-family: arial;
+    }
+  </style>
+
+	<body>
+	  <h1>Player Statistics</h1>
+	  <form action="/">
+	    <input type="submit" value="Return"></p>
+	  </form>
+	  <form method="POST" action="/player">
+	    <input type="text" value="{{p_name}}" name="name">
+	    <input type="submit" value="Show player's team and stats">(e.g. "Harden, James" or "Harden")</p>
+	  </form>
+	  <form method="POST" action="/rank">
+	    <select name="mode">
+	        <option value="pg_point" {% if sel=="pg_point" %} selected="selected"{% endif %}>Points per Game</option>
+	        <option value="pg_rebound" {% if sel=="pg_rebound" %} selected="selected"{% endif %}>Rebound per Game</option>
+	        <option value="pg_assist" {% if sel=="pg_assist" %} selected="selected"{% endif %}>Assist per Game</option>
+	        <option value="pg_block" {% if sel=="pg_block" %} selected="selected"{% endif %}>Block per Game</option>
+	    </select>
+	    <input type="submit" name="stat" value="Leaders of Season 2009-2010!">
+	    <input type="submit" name="stat" value="Leaders of Season 2010-2011!"></p>
+	  </form>
+	  <form method="POST" action="/clear1" >
+	    <input type="submit" value="Clear"></p>
+	  </form>
+
+	  {{tables}}
+
+	</body>
+
+</html>
